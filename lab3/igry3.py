@@ -79,7 +79,7 @@ def compute(h, u_sol, u_ravn, u_paro):
             ravn.append(int(eq[j]))
             j+=1
     if len(ravn) == 0:
-        ravn.append('нет')
+        ravn.append(0)
 
     print(ravn)
     checkRavn = check_answer(u_ravn.split(), ravn)
