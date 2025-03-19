@@ -13,6 +13,8 @@ def check_answer(U_, u_sol):
             return False
     return True
 
+print("test")
+
 def compute(h, u_sol, u_ravn, u_paro):
     h, u_sol = parse(h, u_sol)
     h=np.array(h,int)
