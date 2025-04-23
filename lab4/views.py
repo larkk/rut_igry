@@ -12,11 +12,12 @@ def input_view(request):
             # Get the cleaned data
             a = form.cleaned_data['mat1']
             b = form.cleaned_data['mat2']
-            c = form.cleaned_data['ans']
 
             # Redirect to the result view  
-            s = check5(a,b,c) 
-            return HttpResponse(s)
+            s, m = check5(a,b) 
+            res = '%s<br>%s' %(s, m)
+            print('ss')
+            return HttpResponse(res)
     else:
         form = TextInputForm()
 
